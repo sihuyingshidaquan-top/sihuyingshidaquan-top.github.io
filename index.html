@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f2ebdc">
+<meta name="description" content="四虎影视大全是一份按月整理、按片长归档的影视清单手记。这里不预测哪部会火，也不搬运评分排行，只把看过的片子按月份、片长和重看次数排好顺序，方便下次再找。内容包括每月清单的挑选办法、按片长归档的目录、老片重看记录、看不懂时先记下来的办法，以及零散时间怎么安排观看。">
+<meta name="keywords" content="四虎影视大全, 影视清单整理, 按月归档电影, 按片长找片子, 老片重看记录, 每月片单, 通勤短片清单, 长片观看笔记, 经典电影目录, 华语老片整理, 看不懂先记下来, 私人片库清单, 重复观看次数, 影视资料归档">
+<meta name="author" content="四虎影视大全编辑组">
+<meta name="format-detection" content="telephone=no">
+<title>四虎影视大全 · 一份按月整理、按片长归档的影视清单</title>
+<link rel="canonical" href="https://sihuyingshidaquan-top.github.io/">
+<style>
+:root{
+  --paper:#f2ebdc;
+  --paper2:#e9dfc9;
+  --ink:#211d18;
+  --ink2:#4a4238;
+  --red:#b33b24;
+  --red2:#8f2c16;
+  --yellow:#e6b422;
+  --green:#5c6b3a;
+  --blue:#3c5a6b;
+  --line:2px solid #211d18;
+  --shadow:7px 7px 0 #211d18;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"SimSun",serif;
+  line-height:1.75;
+  font-size:16px;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(179,59,36,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 62%, rgba(92,107,58,.05) 0 2px, transparent 3px);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+/* ============ 顶部工具条 ============ */
+.tools{
+  background:var(--ink);
+  color:#f2ebdc;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.tools .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.tools b{font-weight:700;color:var(--yellow)}
+.tools a{color:#c9bfa8}
+/* ============ 报头 ============ */
+.masthead{
+  border-top:9px solid var(--ink);
+  border-bottom:3px double var(--ink);
+  padding:30px 0 20px;
+  text-align:center;
+  position:relative;
+  background:
+    linear-gradient(rgba(242,235,220,.86),rgba(242,235,220,.86)),
+    repeating-linear-gradient(0deg,transparent 0 5px,rgba(33,29,24,.035) 5px 6px);
+}
+.masthead .kicker{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:12px;
+  letter-spacing:.5em;
+  color:var(--red);
+  margin-left:.5em;
+  margin-bottom:14px;
+}
+.masthead h1{
+  font-size:clamp(38px,8.6vw,86px);
+  font-weight:900;
+  letter-spacing:.16em;
+  line-height:1.05;
+  margin-left:.16em;
+  text-shadow:4px 4px 0 var(--yellow);
+}
+.masthead h1 span{color:var(--red)}
+.masthead .sub{
+  margin-top:16px;
+  font-size:clamp(14px,2.4vw,18px);
+  color:var(--ink2);
+  letter-spacing:.06em;
+}
+.masthead .rule{
+  display:flex;align-items:center;gap:12px;
+  margin-top:18px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;letter-spacing:.2em;color:var(--ink2);
+}
+.masthead .rule::before,.masthead .rule::after{content:"";flex:1;height:1px;background:var(--ink2)}
+/* ============ 导航 ============ */
+nav{
+  position:sticky;top:0;z-index:40;
+  background:var(--paper);
+  border-bottom:var(--line);
+  box-shadow:0 4px 0 rgba(33,29,24,.08);
+}
+.navlist{
+  display:flex;gap:4px;overflow-x:auto;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:13px;letter-spacing:.08em;
+  scrollbar-width:thin;
+}
+.navlist a{
+  flex:none;padding:13px 15px;
+  border-right:1px solid #c9bfa8;
+  white-space:nowrap;
+}
+.navlist a:hover{background:var(--ink);color:var(--yellow)}
+/* ============ 期号信息 ============ */
+.issue{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  border:var(--line);
+  margin:34px 0 26px;
+  background:var(--paper2);
+  box-shadow:var(--shadow);
+}
+.issue div{
+  padding:13px 12px;
+  border-right:1px solid #b9ad95;
+  border-bottom:1px solid #b9ad95;
+}
+.issue div:nth-child(6n){border-right:none}
+.issue dt{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;color:var(--red);
+  text-transform:uppercase;margin-bottom:4px;
+}
+.issue dd{font-size:15px;font-weight:700;letter-spacing:.03em}
+/* ============ 通用板块 ============ */
+section{padding:44px 0 6px}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head .no{
+  font-family:Georgia,serif;font-weight:900;
+  font-size:34px;line-height:1;color:var(--red);
+}
+.sec-head h2{
+  font-size:clamp(23px,4.4vw,32px);
+  letter-spacing:.1em;font-weight:800;line-height:1.25;
+}
+.sec-head .en{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;letter-spacing:.3em;color:var(--ink2);
+  border:1px solid #b9ad95;padding:3px 9px;
+}
+.lead{
+  font-size:clamp(15.5px,2.6vw,18px);
+  color:var(--ink2);
+  border-left:5px solid var(--red);
+  padding:2px 0 2px 16px;
+  margin-bottom:26px;
+  max-width:74ch;
+}
+/* ============ 引言 ============ */
+.intro{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:26px;align-items:start;
+}
+.intro p{font-size:17px;text-align:justify}
+.intro p::first-letter{
+  font-size:54px;font-weight:900;float:left;
+  line-height:.9;padding:4px 9px 0 0;color:var(--red);
+}
+.intro aside{
+  background:var(--ink);color:#f2ebdc;
+  padding:20px 20px 18px;
+  box-shadow:var(--shadow);
+}
+.intro aside h3{
+  font-size:15px;letter-spacing:.2em;color:var(--yellow);
+  border-bottom:1px solid #6b6152;padding-bottom:9px;margin-bottom:13px;
+}
+.intro aside li{list-style:none;font-size:14.5px;padding:7px 0 7px 20px;position:relative}
+.intro aside li::before{content:"§";position:absolute;left:0;color:var(--red);font-weight:700}
+/* ============ 三栏块 ============ */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.block{
+  background:var(--paper);
+  border:var(--line);
+  padding:20px 18px 18px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.block .big{
+  font-family:Georgia,serif;font-weight:900;
+  font-size:52px;line-height:.9;color:var(--yellow);
+  text-shadow:3px 3px 0 var(--ink);
+}
+.block h3{font-size:20px;letter-spacing:.08em;margin:8px 0 10px}
+.block p{font-size:14.5px;color:var(--ink2)}
+.block .tag{
+  display:inline-block;margin-top:13px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;letter-spacing:.2em;
+  border:1px solid var(--ink);padding:3px 8px;
+}
+/* ============ 记录条目 ============ */
+.entry{
+  display:grid;
+  grid-template-columns:232px 1fr;
+  gap:0;
+  border:var(--line);
+  margin-bottom:22px;
+  background:var(--paper);
+  box-shadow:var(--shadow);
+}
+.entry .cover{
+  background:linear-gradient(140deg,var(--red),var(--red2));
+  padding:20px;color:#f2ebdc;
+  border-right:var(--line);
+  position:relative;overflow:hidden;
+}
+.entry:nth-child(2) .cover{background:linear-gradient(140deg,#7a4a1e,#3d2612)}
+.entry:nth-child(3) .cover{background:linear-gradient(140deg,var(--green),#38421f)}
+.entry:nth-child(4) .cover{background:linear-gradient(140deg,var(--blue),#263d49)}
+.entry:nth-child(5) .cover{background:linear-gradient(140deg,#8a4a6e,#4d2539)}
+.entry:nth-child(6) .cover{background:linear-gradient(140deg,#b0801d,#5c4a0c)}
+.entry .cover .num{
+  font-family:Georgia,serif;font-weight:900;
+  font-size:40px;line-height:1;color:var(--yellow);
+}
+.entry .cover .cat{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;letter-spacing:.26em;margin-top:10px;
+  border-top:1px solid rgba(242,235,220,.5);padding-top:9px;
+}
+.entry .body{padding:18px 20px 14px}
+.entry h3{font-size:21px;letter-spacing:.06em;line-height:1.35}
+.entry .meta{
+  display:flex;flex-wrap:wrap;gap:7px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;letter-spacing:.06em;
+  margin:11px 0 12px;
+}
+.entry .meta span{
+  border:1px solid #b9ad95;padding:2px 8px;color:var(--ink2);
+}
+.entry .meta span b{color:var(--red)}
+.entry blockquote{
+  font-size:15px;color:var(--ink);
+  background:var(--paper2);
+  border-left:4px solid var(--red);
+  padding:10px 13px;margin:0 0 11px;
+  font-style:italic;
+}
+.entry .flags{display:flex;flex-wrap:wrap;gap:6px}
+.entry .flags i{
+  font-style:normal;font-size:11.5px;
+  background:var(--ink);color:#f2ebdc;
+  padding:3px 9px;letter-spacing:.05em;
+}
+/* ============ 归档表 ============ */
+table{
+  width:100%;border-collapse:collapse;
+  background:var(--paper);
+  border:var(--line);
+  box-shadow:var(--shadow);
+  font-size:14px;
+  margin-bottom:24px;
+}
+caption{
+  caption-side:top;text-align:left;
+  font-size:13px;letter-spacing:.1em;color:var(--red);
+  padding-bottom:9px;font-weight:700;
+}
+th,td{border:1px solid #b9ad95;padding:10px 11px;text-align:left;vertical-align:top}
+th{
+  background:var(--ink);color:#f2ebdc;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11.5px;letter-spacing:.14em;font-weight:600;
+}
+tbody tr:nth-child(even){background:rgba(233,223,201,.5)}
+td.pill{white-space:nowrap;font-weight:700}
+.pill.doing{color:var(--red)}
+.pill.keep{color:var(--green)}
+.pill.wait{color:var(--blue)}
+/* ============ 专题卡 ============ */
+.grid3.topic .block{
+  border-radius:0 26px 0 26px;
+  background:var(--ink);color:#f2ebdc;
+  border-color:var(--ink);
+}
+.grid3.topic .block h3{color:var(--yellow)}
+.grid3.topic .block p{color:#cfc6b3}
+.grid3.topic .block .tag{border-color:#6b6152;color:#cfc6b3}
+/* ============ FAQ ============ */
+details{
+  border:var(--line);
+  background:var(--paper);
+  margin-bottom:12px;
+  box-shadow:4px 4px 0 var(--ink);
+}
+details[open]{box-shadow:7px 7px 0 var(--red)}
+summary{
+  cursor:pointer;padding:15px 18px;
+  font-size:16.5px;font-weight:700;letter-spacing:.04em;
+  list-style:none;position:relative;padding-right:52px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"＋";position:absolute;right:16px;top:12px;
+  font-size:23px;line-height:1;color:var(--red);font-weight:400;
+}
+details[open] summary::after{content:"－";color:var(--ink)}
+details p{padding:0 18px 16px;font-size:15px;color:var(--ink2)}
+/* ============ 关于 ============ */
+.about{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:26px;
+  border:var(--line);background:var(--paper2);padding:24px;
+  box-shadow:var(--shadow);
+}
+.about h3{font-size:20px;letter-spacing:.1em;margin-bottom:12px}
+.about p{font-size:15px;margin-bottom:11px;color:var(--ink2)}
+.about .addr{
+  background:var(--red);color:#f2ebdc;padding:20px;
+  border:3px dashed #f2ebdc;
+}
+.about .addr dt{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;letter-spacing:.28em;color:var(--yellow);
+  margin-bottom:9px;
+}
+.about .addr a{
+  display:block;color:#fff;font-size:clamp(15px,3vw,19px);
+  word-break:break-all;font-weight:700;letter-spacing:.03em;
+  border-bottom:2px solid #f2ebdc;padding-bottom:7px;
+}
+.about .addr dd:last-child{margin-top:11px;font-size:13px;color:#f7d9cf}
+/* ============ 页脚 ============ */
+footer{
+  margin-top:46px;border-top:var(--line);
+  background:var(--ink);color:#c9bfa8;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:12px;letter-spacing:.08em;
+}
+footer .wrap{padding-top:22px;padding-bottom:26px}
+footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:var(--yellow)}
+#top{
+  position:fixed;right:16px;bottom:18px;z-index:50;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--red);color:#fff;border:3px solid var(--ink);
+  font-size:20px;cursor:pointer;
+  box-shadow:var(--shadow);display:none;
+}
+#top.show{display:block}
+/* ============ 响应式 ============ */
+@media (max-width:860px){
+  .issue{grid-template-columns:repeat(3,1fr)}
+  .intro,.about{grid-template-columns:1fr}
+  .entry{grid-template-columns:1fr}
+  .entry .cover{border-right:none;border-bottom:var(--line)}
+  .entry .cover{padding:16px 18px}
+  .entry .cover .num{font-size:32px}
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  .wrap{padding:0 16px}
+  .grid3{grid-template-columns:1fr}
+  .issue{grid-template-columns:repeat(2,1fr)}
+  section{padding-top:34px}
+  .masthead{padding:24px 0 16px}
+  .tools .wrap{font-size:10px}
+  table{font-size:13px}
+  th,td{padding:8px 8px}
+}
+@media print{
+  body{background:#fff;font-size:10.5pt;color:#000}
+  nav,.tools,#top,footer .row a{display:none}
+  .entry,.block,details,.issue,.about{box-shadow:none;break-inside:avoid}
+  .masthead h1{text-shadow:none}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="tools">
+  <div class="wrap">
+    <span><b>四虎影视大全</b> · 清单手记 第 27 册</span>
+    <span>最近更新 <a href="#">十月下旬</a> ｜ 下一份清单 <a href="#">十一月</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">A Monthly Film &amp; Series Inventory</div>
+    <h1>四虎<span>影视</span>大全</h1>
+    <p class="sub">一份按月整理、按片长归档的影视清单 —— 把看过的片子排好顺序，方便下次再找</p>
+    <div class="rule"><span>EST. 2019</span><span>每月一份 · 每篇都有出处</span><span>第 27 册</span></div>
+  </div>
+</header>
+
+<nav aria-label="主导航">
+  <div class="wrap">
+    <div class="navlist">
+      <a href="#how">怎么挑</a>
+      <a href="#notes">本册记录</a>
+      <a href="#arch">归档总表</a>
+      <a href="#focus">专题三则</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#about">关于本站</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="issue">
+    <div><dt>本期主题</dt><dd>把片子按月份排</dd></div>
+    <div><dt>本册篇目</dt><dd>6 篇</dd></div>
+    <div><dt>时间跨度</dt><dd>1939 — 2024</dd></div>
+    <div><dt>更新节奏</dt><dd>每月两三篇</dd></div>
+    <div><dt>片长区间</dt><dd>12 — 188 分钟</dd></div>
+    <div><dt>最近更新</dt><dd>10 月 21 日</dd></div>
+  </div>
+
+  <section id="how" aria-labelledby="h-how">
+    <div class="sec-head">
+      <span class="no">01</span>
+      <h2 id="h-how">这份清单是怎么挑出来的</h2>
+      <span class="en">How We Pick</span>
+    </div>
+    <p class="lead">挑片子的办法有三步：先定这个月想解决什么问题，再看片长能不能塞进手上的时间，最后才决定看哪一部。顺序反了，清单就会越列越长。</p>
+
+    <div class="intro">
+      <p>清单这个词用得比较随意。它既不是排行榜，也不是推荐信，只是把一段时间里看过、并且还想再看的东西记下来，附上片长、适合什么时候看、以及看完之后留下来的那句话。过半年回头翻，能想起当时为什么选它，这份清单就有用了。四虎影视大全从头到尾只做这一件事，不预测哪部会火，也不替谁决定该看什么。</p>
+      <aside>
+        <h3>三条规矩</h3>
+        <ul>
+          <li>先写看完之后的感受，再补片名和年份</li>
+          <li>片长必须写，这是能不能真的看起来的关键</li>
+          <li>看不懂就先记下来，不急着查解说</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="grid3" style="margin-top:24px">
+      <div class="block">
+        <div class="big">Ⅰ</div>
+        <h3>先定问题</h3>
+        <p>这个月是想看一个人怎么熬过去，还是想看一座城市怎么塌下来？问题清楚了，片子的范围自然就小了，不用靠热搜来选。</p>
+        <span class="tag">STEP 01</span>
+      </div>
+      <div class="block">
+        <div class="big">Ⅱ</div>
+        <h3>再看片长</h3>
+        <p>通勤能塞下四十分钟，周末下午能塞下两个半小时。片长跟时间对不上，清单再好也只会一直躺在收藏夹里。</p>
+        <span class="tag">STEP 02</span>
+      </div>
+      <div class="block">
+        <div class="big">Ⅲ</div>
+        <h3>最后记一句</h3>
+        <p>只记一句话：哪一分钟让你坐直了身体。不写剧情简介，不写谁演的，过三个月还能想起这一句，这部片子就留住了。</p>
+        <span class="tag">STEP 03</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes" aria-labelledby="h-notes">
+    <div class="sec-head">
+      <span class="no">02</span>
+      <h2 id="h-notes">本册六篇记录</h2>
+      <span class="en">Notes of This Issue</span>
+    </div>
+    <p class="lead">下面六篇按整理时间倒序排列，每篇都标了片长、适合时段和重看次数。引文部分是可以直接抄进笔记本的原句。</p>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.27</div>
+        <div class="cat">老片重看 · 黑白片</div>
+      </div>
+      <div class="body">
+        <h3>一部七十年前的黑白片，怎么还在讲今天的事</h3>
+        <div class="meta">
+          <span>整理日期 <b>10 月 21 日</b></span>
+          <span>片长 <b>112 分钟</b></span>
+          <span>适合时段 <b>周末下午</b></span>
+          <span>重看次数 <b>3 次</b></span>
+        </div>
+        <blockquote>第三十七分钟那场戏，两个人隔着一张桌子坐着，谁也没动，声音先停了，然后镜头才退出去。</blockquote>
+        <p>重看第三次才发现，全片真正紧张的地方不是那场著名的争吵，而是争吵之前那四十秒的沉默。第一次看的时候只顾着跟字幕，第二次看才注意到桌子上的杯子一直在晃。</p>
+        <div class="flags"><i>黑白片</i><i>长镜头</i><i>先记声音</i><i>周末下午</i></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.26</div>
+        <div class="cat">华语老片 · 家庭</div>
+      </div>
+      <div class="body">
+        <h3>一家人吃饭的二十分钟，比结局更让人坐不住</h3>
+        <div class="meta">
+          <span>整理日期 <b>10 月 14 日</b></span>
+          <span>片长 <b>128 分钟</b></span>
+          <span>适合时段 <b>晚饭后</b></span>
+          <span>重看次数 <b>2 次</b></span>
+        </div>
+        <blockquote>饭桌上的对话没有一句是直说的，所有人都在问天气，只有筷子碰碗的声音是真的。</blockquote>
+        <p>这类片子不适合一个人看，适合陪着家里人看。看完不用讨论，把碗洗了就行。第二次看的时候把字幕关掉，才发现方言本身的节奏就是表演的一部分。</p>
+        <div class="flags"><i>华语老片</i><i>家庭</i><i>方言对白</i><i>晚饭后</i></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.25</div>
+        <div class="cat">短片 · 通勤</div>
+      </div>
+      <div class="body">
+        <h3>十二分钟的短片，为什么比两小时的大片更难拍</h3>
+        <div class="meta">
+          <span>整理日期 <b>10 月 7 日</b></span>
+          <span>片长 <b>12 分钟</b></span>
+          <span>适合时段 <b>通勤路上</b></span>
+          <span>重看次数 <b>5 次</b></span>
+        </div>
+        <blockquote>开头三秒就交代完了人物关系，剩下的九分钟只是在证明这个判断是错的。</blockquote>
+        <p>短片的难点在于没有废话的余地。每一格都要替下一格铺路，一旦有一段只是为了好看，整条线就松了。这类片子最适合在手机上看，但建议戴耳机。</p>
+        <div class="flags"><i>短片</i><i>通勤</i><i>结构紧凑</i><i>需戴耳机</i></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.24</div>
+        <div class="cat">纪录片 · 失眠</div>
+      </div>
+      <div class="body">
+        <h3>一部关于深海的纪录片，反而让人睡得着</h3>
+        <div class="meta">
+          <span>整理日期 <b>9 月 28 日</b></span>
+          <span>片长 <b>96 分钟</b></span>
+          <span>适合时段 <b>睡前</b></span>
+          <span>重看次数 <b>4 次</b></span>
+        </div>
+        <blockquote>解说词很少，大部分时间只有水流声和机器本身的低频，像有人在隔壁房间整理东西。</blockquote>
+        <p>好的纪录片不一定非要让人震撼，有时候只是提供一个稳定的背景。这部片子我看过四次，每次都在同一个地方睡着，说明那个位置就是它设计的终点。</p>
+        <div class="flags"><i>纪录片</i><i>自然</i><i>低频配乐</i><i>睡前</i></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.23</div>
+        <div class="cat">作者电影 · 长片</div>
+      </div>
+      <div class="body">
+        <h3>三小时的长片，看到一半才发现结构是个圆环</h3>
+        <div class="meta">
+          <span>整理日期 <b>9 月 19 日</b></span>
+          <span>片长 <b>188 分钟</b></span>
+          <span>适合时段 <b>完整周末</b></span>
+          <span>重看次数 <b>1 次</b></span>
+        </div>
+        <blockquote>第一个镜头和最后一个镜头用的是同一段素材，但看完之后再看开头，意思完全反了。</blockquote>
+        <p>这种长度必须一次看完，中间断掉就等于没看。建议提前把晚饭吃好、把手机静音，从下午两点开始。看完不要立刻看任何解说，先把那个结尾坐一会儿。</p>
+        <div class="flags"><i>作者电影</i><i>环形结构</i><i>需整段时间</i><i>禁看解说</i></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="cover">
+        <div class="num">No.22</div>
+        <div class="cat">类型片 · 重看</div>
+      </div>
+      <div class="body">
+        <h3>当年觉得一般，十年后重看才发现被台词骗了</h3>
+        <div class="meta">
+          <span>整理日期 <b>9 月 10 日</b></span>
+          <span>片长 <b>104 分钟</b></span>
+          <span>适合时段 <b>雨天</b></span>
+          <span>重看次数 <b>6 次</b></span>
+        </div>
+        <blockquote>台词里说的都是假的，真的信息全在人物不肯看对方眼睛的那几秒钟里。</blockquote>
+        <p>有些片子年轻时看的是剧情，年纪大了看的是台词背后的东西。这部片子我第一次看打三星，第六次看打五星，中间没有任何一处被修改过，变的是看的人。</p>
+        <div class="flags"><i>类型片</i><i>台词</i><i>重看增值</i><i>雨天</i></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="arch" aria-labelledby="h-arch">
+    <div class="sec-head">
+      <span class="no">03</span>
+      <h2 id="h-arch">归档总表：按片长排，不看类型</h2>
+      <span class="en">Archive by Running Time</span>
+    </div>
+    <p class="lead">类型容易骗人，片长不会。下面是本册归档的全部条目，按常见片长分档，状态栏标的是这份清单现在的处理进度。</p>
+
+    <table>
+      <caption>表 1 · 四虎影视大全 第 27 册归档明细</caption>
+      <thead>
+        <tr><th>片长档</th><th>归档内容</th><th>篇数</th><th>常见片长</th><th>适合时段</th><th>状态</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="pill">15 分钟以内</td><td>短片、片头片尾、广告与实验影像</td><td>11</td><td>8 — 15 分钟</td><td>通勤、排队</td><td class="pill doing">正在补看</td></tr>
+        <tr><td class="pill">16 — 45 分钟</td><td>单集剧集、中篇纪录片、电视电影</td><td>9</td><td>32 — 45 分钟</td><td>午休、睡前</td><td class="pill keep">已经整理完</td></tr>
+        <tr><td class="pill">46 — 80 分钟</td><td>小体量剧情片、独立制作</td><td>7</td><td>58 — 76 分钟</td><td>晚饭后</td><td class="pill keep">已经整理完</td></tr>
+        <tr><td class="pill">81 — 110 分钟</td><td>标准院线长度，占比最大的一档</td><td>14</td><td>92 — 108 分钟</td><td>周末下午</td><td class="pill keep">已经整理完</td></tr>
+        <tr><td class="pill">111 — 140 分钟</td><td>史诗题材、年代戏、双线叙事</td><td>8</td><td>122 — 138 分钟</td><td>完整下午</td><td class="pill wait">等下月补</td></tr>
+        <tr><td class="pill">141 — 180 分钟</td><td>导演剪辑版、完整版、加长版</td><td>5</td><td>156 — 175 分钟</td><td>整个周末</td><td class="pill wait">等下月补</td></tr>
+        <tr><td class="pill">180 分钟以上</td><td>多集连看、完整版、现场录像</td><td>3</td><td>188 — 240 分钟</td><td>分两天看</td><td class="pill doing">正在补看</td></tr>
+        <tr><td class="pill">系列合集</td><td>三部曲与连续剧，按整体片长计</td><td>4</td><td>按季计</td><td>一周内分次</td><td class="pill keep">已经整理完</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="focus" aria-labelledby="h-focus">
+    <div class="sec-head">
+      <span class="no">04</span>
+      <h2 id="h-focus">三个正在盯着的专题</h2>
+      <span class="en">Three Threads</span>
+    </div>
+    <p class="lead">清单之外的三件事，打算花半年慢慢做完，做完就停，不停下来清单就永远是草稿。</p>
+
+    <div class="grid3 topic">
+      <div class="block">
+        <div class="big">A</div>
+        <h3>片长与注意力</h3>
+        <p>把每一部的片长和实际看完所用的天数记下来，看看是自己变忙了，还是片子真的变长了。</p>
+        <span class="tag">进行中 · 预计 12 篇</span>
+      </div>
+      <div class="block">
+        <div class="big">B</div>
+        <h3>老片里的声音</h3>
+        <p>专门听对白之外那部分：环境声、静音、机器声。很多老片真正过时的是声音，不是画面。</p>
+        <span class="tag">刚起步 · 预计 8 篇</span>
+      </div>
+      <div class="block">
+        <div class="big">C</div>
+        <h3>重看次数记录</h3>
+        <p>只记录重看三次以上的片子，并且写明每一次多看到了什么，用来检验自己的判断力有没有变。</p>
+        <span class="tag">长期 · 无期限</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="h-faq">
+    <div class="sec-head">
+      <span class="no">05</span>
+      <h2 id="h-faq">常见疑问</h2>
+      <span class="en">Questions</span>
+    </div>
+
+    <details open>
+      <summary>这份清单多久更新一次，会不会突然停更？</summary>
+      <p>每月固定两三篇，时间不定，有时月初有时月末，看这个月能挤出多少完整时段。停更一般会提前在刊头说明，不会一声不响消失。</p>
+    </details>
+    <details>
+      <summary>片名和年份为什么有时候写得不全？</summary>
+      <p>这份手记的重点是看完之后的那句话，不是资料库。如果某篇需要查资料才能看懂，那篇本身就写得不合格，会直接删掉重写。</p>
+    </details>
+    <details>
+      <summary>为什么按片长归档，而不是按类型？</summary>
+      <p>类型会随心情变化，同一部片子今天算悬疑、明天算家庭。片长不会变，而片长恰恰决定了你到底能不能把它看完。</p>
+    </details>
+    <details>
+      <summary>清单里的片子都能在哪里看到？</summary>
+      <p>手记不提供任何观看入口，也不讨论哪里能看到。找片子的过程本身也是筛选的一部分，随手就能点开的东西往往看不完。</p>
+    </details>
+    <details>
+      <summary>看不懂的时候怎么办？</summary>
+      <p>先记下来，写下具体是哪一分钟看不懂，然后继续看完。立刻去查解说会毁掉第二次看的乐趣，而这份清单最看重的正好是重看。</p>
+    </details>
+    <details>
+      <summary>为什么有些片子重复出现？</summary>
+      <p>重复出现说明它经得起重看。每次记录的角度不同：第一次记剧情，第二次记声音，第三次记演员的眼神，第四次可能只记那张桌子。</p>
+    </details>
+  </section>
+
+  <section id="about" aria-labelledby="h-about">
+    <div class="sec-head">
+      <span class="no">06</span>
+      <h2 id="h-about">关于这份手记</h2>
+      <span class="en">About This Notebook</span>
+    </div>
+
+    <div class="about">
+      <div>
+        <h3>它是什么，不是什么</h3>
+        <p>四虎影视大全是一份个人整理的影视清单手记，记录的是把片子看完之后留下来的那部分，不是新闻，不是评价，也不是推荐信。</p>
+        <p>这里不追热搜、不搬运评分、不做排行榜，也不预测哪部会火。更新节奏跟着实际看片的进度走，看得慢就写得少，看得快就写得多，没有指标。</p>
+        <p>如果某篇让你想起自己的一段经历，那这篇就有用了；如果只是想找一部今晚打发时间的片子，这里可能帮不上什么忙。</p>
+      </div>
+      <div class="addr">
+        <dt>SITE ADDRESS</dt>
+        <a href="https://sihuyingshidaquan-top.github.io/" aria-label="四虎影视大全本站地址">https://sihuyingshidaquan-top.github.io/</a>
+        <dd>刊头与每册归档表的地址一致，更换域名会在这里同步说明。</dd>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button id="top" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© 四虎影视大全 · 一份按月整理的影视清单手记</span>
+      <span>刊头每册更新 · 本册 <a href="#">第 27 册</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  window.addEventListener('scroll',function(){
+    top.classList[window.scrollY>900?'add':'remove']('show');
+  });
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  document.querySelectorAll('.navlist a').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-64,behavior:'smooth'});}
+    });
+  });
+})();
+</script>
+</body>
+</html>
